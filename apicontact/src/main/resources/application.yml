@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+---
+spring:
+  profiles: local
+  datasource:
+      url: jdbc:postgresql://postgres-db:5432/apicontact
+      username: postgres
+      password: postgres@123
+
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+
+---
+spring:
+  profiles: qa
+  datasource:
+    url: jdbc:${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
