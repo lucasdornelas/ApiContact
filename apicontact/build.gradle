@@ -37,6 +37,7 @@ dependencies {
 	compile('org.codehaus.groovy:groovy-all:2.4.9')
 	compile('org.projectlombok:lombok:1.16.14')
 	compile('org.json:json:20160810')
+	compile('com.google.zxing:core:3.3.3')
 
 	compile('org.postgresql:postgresql:42.0.0')
 	compile('commons-dbcp:commons-dbcp:1.4')
